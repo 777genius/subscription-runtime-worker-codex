@@ -1,0 +1,39 @@
+{
+  "name": "@reviewrouter/subscription-runtime-worker-codex",
+  "version": "0.0.0-main.0",
+  "description": "Codex file-backend worker for Subscription Runtime.",
+  "license": "UNLICENSED",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/777genius/subscription-runtime-worker-codex.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "dependencies": {
+    "@reviewrouter/subscription-runtime-core": "git+https://github.com/777genius/subscription-runtime-core.git#main",
+    "@reviewrouter/subscription-runtime-provider-codex": "git+https://github.com/777genius/subscription-runtime-provider-codex.git#main",
+    "@reviewrouter/subscription-runtime-store-local-file": "git+https://github.com/777genius/subscription-runtime-store-local-file.git#main",
+    "@reviewrouter/subscription-runtime-worker-core": "git+https://github.com/777genius/subscription-runtime-worker-core.git#main"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
